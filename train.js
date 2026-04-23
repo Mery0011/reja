@@ -75,3 +75,17 @@ console.log("passed here 1");
 }
 run();
 */
+
+//MITASK
+/*function countLetter(letter, word) {
+  let count = 0;
+  for (let i = 0; i < word.length; i++) {
+    if (word[i] === letter) {
+      count++;
+    }
+  }
+ return count;
+}
+// Test
+console.log(countLetter("m", "muminova")); 
+*/
