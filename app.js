@@ -1,6 +1,6 @@
 console.log('Web Serverni boshlash');
 const express = require("express");
-const app = express(); // expressning app Objectni yuboradi
+const app = express(); 
 const fs = require("fs");
 
 let user;
@@ -16,24 +16,14 @@ fs.readFile("database/user.json", "utf8", (err, data) => {
 // MongoDB choqirish
 const db = require("./server").db();
 
-
-// app objectida 4 ta bosgichga bolamiz
-
 // 1: Kirish code
-app.use(express.static("public")); // public folder ochik boladi
-//clientlarga/koroladi
-app.use(express.json()); // kirip kelyatgan json formatdaki datani
-//Object holatiga bizga ogurip beradi
-app.use(express.urlencoded({extended: true})); // html'dan traditional
-//request form shakli bor, formdan biror narsani post qilsak, bizning
-//express serverimiz qabul qiloladi
+app.use(express.static("public")); 
+app.use(express.json()); 
+app.use(express.urlencoded({extended: true})); 
 
 // 2: Sesssion code
 
 // 3: Views code
-// bssr - yoli tanladik, backend'de view yasaymiz
-// npm i ejs -> install qilamiz, EJS = Embedded Javascript, ejs orqali
-//backend'da frontend'ni yosaymiz
 app.set("views", "views");
 app.set("view engine", "ejs");
 
@@ -42,7 +32,6 @@ app.set("view engine", "ejs");
 
 app.post('/create-item', (req, res) => {
     console.log("user entered /");
-    //console.log(req.body);
     const new_reja = req.body.reja;
     db.collection("plans").insertOne({reja: new_reja}, (err, data) => {
         if(err) {
@@ -62,8 +51,7 @@ app.get('/author', (req, res) => {
 
 app.get("/", function (req, res) {
     console.log("user entered /");
-    db.collection("plans").find().toArray((err, data) => { // mongoDB
-//bilan CRUD operatsiyani amalga oshiramiz
+    db.collection("plans").find().toArray((err, data) => { 
         if(err) {
             console.log(err);
             res.end("something went wrong");
