@@ -1,6 +1,46 @@
+//TASK-D
+class Shop {
+  constructor(non, lagmon, cola) {
+    this.non = non;
+    this.lagmon = lagmon;
+    this.cola = cola;
+  }
+
+  time() {
+    let d = new Date();
+    return d.getHours() + ":" + d.getMinutes();
+  }
+
+  qoldiq() {
+    return `Hozir ${this.time()}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`;
+  }
+
+  sotish(nomi, soni) {
+    this[nomi] -= soni;
+    console.log(`${this.time()}da ${soni}ta ${nomi} sotildi`);
+  }
+
+  qabul(nomi, soni) {
+    this[nomi] += soni;
+    console.log(`${this.time()}da ${soni}ta ${nomi} qabul qilindi`);
+  }
+}
+
+// TEST
+const shop = new Shop(4, 5, 2);
+
+console.log(shop.qoldiq());
+
+shop.sotish('non', 3);
+shop.qabul('cola', 4);
+
+console.log(shop.qoldiq());
+
+
+
 //TASK-C
 
-function checkContent(str1, str2) {
+/*function checkContent(str1, str2) {
     if (str1.length !== str2.length) return false;
 
     return str1.split('').sort().join('') ===
@@ -10,7 +50,7 @@ function checkContent(str1, str2) {
 // test
 console.log(checkContent("listen", "silent"));// true
 console.log(checkContent("hello", "world")); // false
-
+*/
 
 //TASK-B 
 
