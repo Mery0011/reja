@@ -1,5 +1,13 @@
+//TASK-E
+function getReverse(str) {
+  return str.split('').reverse().join('');
+}
+
+// test
+console.log(getReverse("hello")); // olleh
+
 //TASK-D
-class Shop {
+/*class Shop {
   constructor(non, lagmon, cola) {
     this.non = non;
     this.lagmon = lagmon;
@@ -35,7 +43,7 @@ shop.sotish('non', 3);
 shop.qabul('cola', 4);
 
 console.log(shop.qoldiq());
-
+*/
 
 
 //TASK-C
@@ -52,7 +60,7 @@ console.log(checkContent("listen", "silent"));// true
 console.log(checkContent("hello", "world")); // false
 */
 
-//TASK-B 
+//TASK-B
 
 /*function countNum(word) {
   let count = 0;
@@ -118,7 +126,7 @@ else {
 console.log("passed here 1");
 */
 
-//ASYNC function 
+//ASYNC function
 /*async function maslahatBering(a) {
   if (typeof a !== "number") throw new Error("insert a number");
   else if (a <= 20) return list[0];
