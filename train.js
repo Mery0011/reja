@@ -1,11 +1,31 @@
+//TASK-F
+function findDoublers(str) {
+  for (let i = 0; i < str.length; i++) {
+
+    for (let j = i + 1; j < str.length; j++) {
+
+      if (str[i] === str[j]) {
+        return true;
+      }
+
+    }
+
+  }
+
+  return false;
+}
+
+console.log(findDoublers("hello")); // true
+console.log(findDoublers("world")); // false
+
 //TASK-E
-function getReverse(str) {
+/*function getReverse(str) {
   return str.split('').reverse().join('');
 }
 
 // test
 console.log(getReverse("hello")); // olleh
-
+*/
 //TASK-D
 /*class Shop {
   constructor(non, lagmon, cola) {
