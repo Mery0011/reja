@@ -1,5 +1,18 @@
+//TASK-G
+/*
+def getHighestIndex(arr):
+max_value = max(arr)
+return arr.index(max_value)
+
+
+print(getHighestIndex([5, 21, 12, 21, 8]))
+
+http://93.188.166.198:3012
+*/
+
+
 //TASK-F
-function findDoublers(str) {
+/*function findDoublers(str) {
   for (let i = 0; i < str.length; i++) {
 
     for (let j = i + 1; j < str.length; j++) {
@@ -17,6 +30,8 @@ function findDoublers(str) {
 
 console.log(findDoublers("hello")); // true
 console.log(findDoublers("world")); // false
+*/
+
 
 //TASK-E
 /*function getReverse(str) {
