@@ -1,3 +1,18 @@
+//TASK-H
+/*
+def getPositive(arr):
+    result = ""
+
+    for num in arr:
+        if num > 0:
+            result += str(num)
+
+    return result
+
+
+print(getPositive([1, -4, 2]))
+
+
 //TASK-G
 /*
 def getHighestIndex(arr):
