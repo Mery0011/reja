@@ -1,16 +1,16 @@
 //TASK-H
-/*
-def getPositive(arr):
-    result = ""
 
-    for num in arr:
-        if num > 0:
-            result += str(num)
+function getPositive(a) {
+  if (a.some((ele) => typeof ele !== "number")) {
+    return "ERROR, elements of array must be number!";
+  }
+  return a.filter((num) => num > 0).join("");
+}
 
-    return result
+const a = [1, -4, 2];
+const result = getPositive(a);
+console.log(result);
 
-
-print(getPositive([1, -4, 2]))
 
 
 //TASK-G
