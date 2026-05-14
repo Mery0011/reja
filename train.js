@@ -1,5 +1,34 @@
-//TASK-H
+//TASK -I
 
+function majorityElement(arr) {
+
+  let result = arr[0];
+  let max = 0;
+
+  for (let num of arr) {
+
+    let count = 0;
+
+    for (let item of arr) {
+      if (num === item) {
+        count++;
+      }
+    }
+
+    if (count > max) {
+      max = count;
+      result = num;
+    }
+  }
+
+  return result;
+}
+
+console.log(majorityElement([1, 2, 3, 4, 5, 4, 3, 4]));
+
+
+//TASK-H
+/*
 function getPositive(a) {
   if (a.some((ele) => typeof ele !== "number")) {
     return "ERROR, elements of array must be number!";
@@ -10,7 +39,7 @@ function getPositive(a) {
 const a = [1, -4, 2];
 const result = getPositive(a);
 console.log(result);
-
+*/
 
 
 //TASK-G
