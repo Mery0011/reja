@@ -1,6 +1,14 @@
+//TASK - J
+function findLongestWord(str) {
+  return str.split(" ").sort((a, b) => b.length - a.length)[0];
+}
+
+console.log(findLongestWord("Muminova Nasiba Ulugbek kizi"));
+
+
 //TASK -I
 
-function majorityElement(arr) {
+/*function majorityElement(arr) {
 
   let result = arr[0];
   let max = 0;
@@ -25,7 +33,7 @@ function majorityElement(arr) {
 }
 
 console.log(majorityElement([1, 2, 3, 4, 5, 4, 3, 4]));
-
+*/
 
 //TASK-H
 /*
