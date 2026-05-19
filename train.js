@@ -1,9 +1,33 @@
+//TASK-K
+function countVowels(text) {
+  let count = 0;
+
+  for (let unli of text) {
+    if (
+      unli === "a" ||
+      unli === "e" ||
+      unli === "i" ||
+      unli === "o" ||
+      unli === "u"
+    ) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+console.log(countVowels("dream"));
+
+
 //TASK - J
-function findLongestWord(str) {
+/*function findLongestWord(str) {
   return str.split(" ").sort((a, b) => b.length - a.length)[0];
 }
 
 console.log(findLongestWord("Muminova Nasiba Ulugbek kizi"));
+
+*/
 
 
 //TASK -I
